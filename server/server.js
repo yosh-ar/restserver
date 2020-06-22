@@ -3,6 +3,7 @@ require('./config/config')
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
+const path = require('path');
 
 const bodyParser = require('body-parser')
 
@@ -12,6 +13,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
+//configurar vista 
+app.use(express.static(path.resolve(__dirname, '../public/')));
+
+//configuracion e las rutas
 app.use(require('./routes/index')); //esto nos trae todas las rutas
 
 mongoose.connect(process.env.URLDB, { useNewUrlParser: true, useCreateIndex: true }, (err, res) => {

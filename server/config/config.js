@@ -29,3 +29,8 @@ if (process.env.NODE_ENV === 'dev') {
 }
 
 process.env.URLDB = urlDB;
+
+
+// CONFIGURACION DEL CLIENTE AUTENTICACION DE GOOGLE
+
+process.env.CLIENT_ID = process.env.CLIENT_ID || '457676610938-imgc8k0iid8n91s2n1s3ocfcca2181hi.apps.googleusercontent.com';
