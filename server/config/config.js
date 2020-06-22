@@ -5,6 +5,19 @@ process.env.PORT = process.env.PORT || 3000
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 
+// configuración del vencimiento del token
+// 60 segundos
+// 60 minutos
+// 24 horas
+// 30 dias
+process.env.CADUCIDAD_Token = 60 * 60 * 24 * 30;
+
+// configuración del seed o semilla
+
+process.env.SEED = process.env.SEED || 'este-es-el-seend-desarrollo';
+
+
+
 // configuracion base de datos
 
 let urlDB
